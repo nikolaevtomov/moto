@@ -6,8 +6,14 @@
     .controller('MainController', MainController);
 
   /** @ngInject */
-  function MainController($timeout, webDevTec, toastr) {
+
+  function MainController($timeout, webDevTec, toastr, news) {
+
     var vm = this;
+
+    news.list(function(news) {
+      vm.news = news;
+    });
 
     vm.awesomeThings = [];
     vm.classAnimation = '';
@@ -36,4 +42,5 @@
       });
     }
   }
+
 })();

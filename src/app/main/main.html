@@ -1,5 +1,10 @@
 <div class="container">
 
+  <div ng-repeat="article in main.news">
+    <img ng-src="{{article.images.img1}}" alt="{{article.title}}">
+    <a ng-href="news/{{article.category}}/{{article.title}}">{{article.title}}</a>
+  </div>
+
   <div>
     <acme-navbar creation-date="main.creationDate"></acme-navbar>
   </div>
