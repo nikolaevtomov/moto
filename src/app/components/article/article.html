@@ -1,0 +1,42 @@
+
+<section class="ms-container">
+
+  <article class="articleColumn">
+
+    <img ng-src="{{article.images.img1}}" alt="{{article.post.intro}}"/>
+
+    <h3>{{article.title}}</h3>
+
+    <date>{{article.date | date:'medium'}}</date>
+
+    <p>{{article.post.intro}}</p>
+    <p>{{article.post.content}}</p>
+
+    <h3>{{article.post.subhead}}</h3>
+    <p>{{article.post.subcont}}</p>
+    <h3>{{article.post.subhead2}}</h3>
+    <p>{{article.post.subcont2}}</p>
+
+    <img class="subImg" ng-src="{{article.images.img2}}" alt="{{article.post.intro}}"/>
+    <img class="subImg" ng-src="{{article.images.img3}}" alt="{{article.post.intro}}"/>
+    <img class="subImg" ng-src="{{article.images.img4}}" alt="{{article.post.intro}}"/>
+    <img class="subImg" ng-src="{{article.images.img5}}" alt="{{article.post.intro}}"/>
+    <img class="subImg" ng-src="{{article.images.img6}}" alt="{{article.post.intro}}"/>
+    <img class="subImg" ng-src="{{article.images.img7}}" alt="{{article.post.intro}}"/>
+
+  </article>
+
+  <aside class="articleRightColumn">
+    <!-- Right Column Module -->
+    <right-column></right-column>
+  </aside>
+
+  <nav>
+    <ul>
+      <li><a ng-href="#/news">Back to News</a></li>
+      <li><a ng-href="#/">Back to Home</a></li>
+    </ul>
+  </nav>
+
+
+</section>

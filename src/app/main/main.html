@@ -1,9 +1,67 @@
-<div class="container">
+<section class="ms-container">
 
-  <div ng-repeat="article in vm.news | property:'category':'rally' | orderBy:'-date' | limitTo:-4">
-    <img ng-src="{{article.images.img1}}" alt="{{article.title}}">
-    <a ng-href="news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:10:' ...'}}</a>
-  </div>
+  <section class="mainLeft">
 
+    <div class="sliderWrp">
+      <!--Slider one-->
+      <moto-slider class="motoSlider mainSlider" slider-instance="slider" current-slide="actualslide" transition-property="opacity" start-value="0" visible-value="1" end-value="0" auto-play="true" transition-delay="4">
+        <figure class="figure" ng-repeat="article in vm.news">
+          <img ng-src="{{article.images.img1}}" alt="{{article.title}}">
+          <figcaption>
+            <h2><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:48:' ...'}}</a></h2>
+            <!--<p>{{article.post.content | limitString:true:100:' ...'}}</p>-->
+          </figcaption>
+        </figure>
+      </moto-slider>
 
-</div>
+      <button type="button" class="sliderWrp__prev" ng-model="actualslide" ng-click="slider.prev()"></button>
+      <button type="button" class="sliderWrp__next" ng-model="actualslide" ng-click="slider.next()"></button>
+    </div>
+    <!--Main Page Thumbnail one-->
+    <div class="mainThm">
+      <div class="mainThm__inner" ng-repeat="article in vm.news | property:'category':'rally' | orderBy:'-date' | limitTo:-4">
+        <img src="{{article.images.img1}}" alt="{{article.title}}"/>
+        <h4 class="mainThm__inner--title"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:50:' ...'}}</a></h4>
+        <date class="mainThm__inner--date">{{article.date | date:'medium'}}</date>
+        <p class="mainThm__inner--content">{{article.post.content | limitString:true:200:' ...'}}</p>
+        <span class="mainThm__inner--cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
+      </div>
+    </div>
+
+    <div class="sliderWrp gp">
+      <!--Slider two-->
+      <moto-slider class="motoSlider mainSliderGp" slider-instance="slidergp" current-slide="actualslideGp" transition-property="opacity" start-value="0" visible-value="1" end-value="0" auto-play="true">
+        <figure class="figure" ng-repeat="article in vm.news | property:'category':'motogp'">
+          <img ng-src="{{article.images.img1}}" alt="{{article.title}}">
+          <figcaption>
+            <h2><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:48:' ...'}}</a></h2>
+            <!--<p>{{article.post.content | limitString:true:50:' ...'}}</p>-->
+          </figcaption>
+        </figure>
+      </moto-slider>
+
+      <button type="button" class="sliderWrp__prev" ng-model="actualslideGp" ng-click="slidergp.prev()"></button>
+      <button type="button" class="sliderWrp__next" ng-model="actualslideGp" ng-click="slidergp.next()"></button>
+    </div>
+    <!--Main Page Thumbnail two-->
+    <div class="mainThm">
+      <div class="mainThm__inner" ng-repeat="article in vm.news | property:'category':'vintage' | orderBy:'-date' | limitTo:-4">
+        <img src="{{article.images.img1}}" alt="{{article.title}}"/>
+        <h4 class="mainThm__inner--title"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:50:' ...'}}</a></h4>
+        <date class="mainThm__inner--date">{{article.date | date:'medium'}}</date>
+        <p class="mainThm__inner--content">{{article.post.content | limitString:true:200:' ...'}}</p>
+        <span class="mainThm__inner--cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
+      </div>
+    </div>
+
+  </section>
+
+  <aside class="mainRight">
+    <!-- Carousel Module -->
+    <carouselar displaying-image-count="3"></carouselar>
+    <!-- Right Column Module -->
+    <right-column></right-column>
+
+  </aside>
+
+</section>

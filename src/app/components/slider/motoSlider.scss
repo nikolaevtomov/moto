@@ -1,0 +1,84 @@
+$moduleMotoSliderAll: 'motoSlider';
+$moduleMainSlider: 'mainSlider';
+$moduleMotoGp: 'mainSliderGp';
+
+.#{$moduleMotoSliderAll} {
+  width: 100%;
+  height: em(209);
+  @include susy-breakpoint(30em, 8) { // 480px
+    // Mobile Landscape.
+    height: em(314);
+  }
+  @include susy-breakpoint(48em, 10) { // 768px
+    // Tablet Portrait.
+    height: em(246);
+  }
+  @include susy-breakpoint(62em, 12) { //  992px
+    //Tablet Landscape & Small Desktop.
+    height: em(318);
+  }
+  @include susy-breakpoint(75em, 12) { // 1200px
+    // Large Desktop.
+    height: em(384);
+  }
+  margin-bottom: 1em;
+
+  & img {
+    width: 100%;
+  }
+  & figcaption {
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    right: 5%;
+    bottom: 5%;
+    padding: 10px;
+    background-color: rgba(51, 73, 96, 0.5);
+    overflow: hidden;
+    & h2 {
+      margin: 0;
+      color: #fff;
+      font-size: em(26);
+    }
+    & a {
+
+    }
+  }
+
+}
+
+.sliderWrp {
+
+  position: relative;
+  & button {
+    border: 0 none;
+  }
+  &__prev {
+    position: absolute;
+    top: 42%;
+    z-index: 11;
+    left: 5%;
+    width: em(50);
+    height: em(50);
+    background: url("#{$images}arrowLeft.png") no-repeat center center transparent;
+    background-size: cover;
+  }
+  &__next {
+    position: absolute;
+    top: 42%;
+    z-index: 11;
+    right: 5%;
+    width: em(50);
+    height: em(50);
+    background: url("#{$images}arrowRight.png") no-repeat center center transparent;
+    background-size: cover;
+  }
+}
+
+.#{$moduleMainSlider} {
+
+}
+
+.#{$moduleMotoGp} {
+
+}

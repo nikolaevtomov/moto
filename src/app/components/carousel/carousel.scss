@@ -1,0 +1,122 @@
+$module: 'carouselar';
+$color-light: #fff;
+$color-dark: #333;
+$measure: 1.5em; // 24px
+$transition-duration: .3s;
+
+.#{$module} {
+// carouselar
+
+  &__container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  &__inner-container {
+    height: em(320);
+    transition: transform $transition-duration;
+  }
+
+  &__image-container {
+    position: relative;
+    height: em(320);
+    transition: width $transition-duration;
+    display: inline-table;
+  }
+
+  &__image {
+    position: relative;
+    display: inline;
+    width: 100%;
+  }
+
+  &__date {
+    width: 100%;
+    float: left;
+    margin-top: em(10);
+    @include date();
+  }
+
+  &__heading {
+    position: relative;
+    width: 100%;
+    float: left;
+    margin: em(10, 14) 0;
+    font-size: 1em;
+    a {
+      white-space: normal;
+    }
+  }
+
+  &__cat {
+    @include tag();
+    position: absolute;
+    bottom: em(15);
+    left: 0;
+  }
+  
+  &__loader {
+    border-radius: $measure;
+    border: 2px dashed $color-light;
+    width: $measure;
+    height: $measure;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: (-$measure / 2) 0 0 (-$measure / 2);
+    -webkit-animation: carouselar-spinner $transition-duration * 6 linear infinite;
+    -moz-animation: carouselar-spinner $transition-duration * 6 linear infinite;
+    animation: carouselar-spinner $transition-duration * 6 linear infinite;
+  }
+
+  &__navigation {
+    position: relative;
+
+    &__index {
+      display: none;
+      width: 100%;
+      text-align: center;
+    }
+
+    &__button {
+      position: absolute;
+      top: 0;
+      z-index: 1;
+      cursor: pointer;
+      padding: $measure / 2;
+
+      &__active, &:hover {
+        color: $color-light;
+        background: $color-dark;
+      }
+
+      &--prev {
+        left: 0;
+      }
+
+      &--next {
+        right: 0;
+      }
+
+      &__active, &--index {
+        position: relative;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+@-webkit-keyframes carouselar-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@-moz-keyframes arouselar-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+@keyframes arouselar-spinner {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

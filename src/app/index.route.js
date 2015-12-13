@@ -5,11 +5,13 @@
     .module('moto')
     .config(routeConfig);
 
-    //TODO: Config the $locationProvider for pretty URL
-    //.config(locationConfig);
+    // TODO: Config the $locationProvider for pretty URL
 
     function routeConfig($routeProvider) {
-      $routeProvider
+
+    //$locationProvider.html5Mode(true);
+
+    $routeProvider
         .when('/', {
             templateUrl: 'app/main/main.html',
             controller: 'MainController',
@@ -17,22 +19,18 @@
         })
         .when('/news/:category?', {
             templateUrl: 'app/components/news/news.html',
-            controller: 'NewsCtrl',
+            controller: 'NewsController',
             controllerAs: 'vm'
         })
         .when('/news/:category/:articleName', {
             templateUrl: 'app/components/article/article.html',
-            controller: 'ArticleCtrl',
+            controller: 'ArticleController',
             controllerAs: 'vm'
         })
         .otherwise({
             redirectTo: '/'
         });
-    }
 
-    //function locationConfig($locationProvider) {
-    //    // use the HTML5 History API
-    //    $locationProvider.html5Mode(true);
-    //}
+    }
 
 })();

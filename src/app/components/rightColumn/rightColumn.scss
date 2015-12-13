@@ -1,0 +1,76 @@
+$module: 'rightColumnModule';
+$module2: 'motoThumbs';
+$module3: 'videos';
+
+.#{$module} {
+
+  @include susy-breakpoint(62em, 12) { //  992px
+    //Tablet Landscape & Small Desktop.
+
+  }
+
+  & .left {
+    @include susy-breakpoint(62em, 12) { //  992px
+      //Tablet Landscape & Small Desktop.
+      @include span(8);
+    }
+
+  }
+
+  & .right {
+    @include susy-breakpoint(62em, 12) { //  992px
+      //Tablet Landscape & Small Desktop.
+      @include span(4 last);
+    }
+
+  }
+
+}
+
+.#{$module2} {
+
+  &:not(:nth-child(2)) {
+    & img {
+      display: none;
+    }
+  }
+  &:nth-child(6) {
+    & img {
+      display: block;
+    }
+  }
+  &__title {
+    width: 100%;
+    float: left;
+    font-size: em(20);
+  }
+  &__date {
+    @include date();
+  }
+  &__intro {
+    font-size: em(14);
+  }
+  &__cat {
+    @include tag();
+  }
+}
+
+.#{$module3} {
+  & video {
+    width: 100%;
+    float: left;
+  }
+  &__date {
+    width: 100%;
+    float: left;
+    @include date();
+  }
+  &__title {
+    width: 100%;
+    float: left;
+    font-size: em(14);
+  }
+  &__cat {
+    @include tag();
+  }
+}

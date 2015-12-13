@@ -1,0 +1,29 @@
+
+<div class="ms-container carouselar">
+
+  <div class="carouselar__navigation">
+    <span class="carouselar__navigation__button carouselar__navigation__button--prev" ng-click="vm.prev()">PREV</span>
+    <div class="carouselar__navigation__index">
+      <span class="carouselar__navigation__button carouselar__navigation__button--index" ng-repeat="i in vm.createArray(vm.sectionCount) track by $index" ng-class="{carouselar__navigation__button__active: $index === vm.activeSection}" ng-click="vm.moveToSection($index)">{{$index + 1}}</span>
+    </div>
+    <span class="carouselar__navigation__button carouselar__navigation__button--next" ng-click="vm.next()">NEXT</span>
+  </div>
+
+  <div class="carouselar__container">
+    <div class="carouselar__inner-container" ng-style="{transform: vm.containerPosition}">
+      <!--| limitTo:-10 | orderBy:'time':true-->
+      <carouselar-image
+              class="carouselar__image-container"
+              ng-style="{width: vm.singleImageWidth}"
+              ng-repeat="article in vm.news"
+              is-visible="vm.isImageVisible($index)"
+              img-url="{{article.images.img1}}"
+              date="{{article.date | date:'medium'}}"
+              category-url="{{article.category}}"
+              heading-url="{{article.title}}"
+              tag="{{article.category}}">
+      </carouselar-image>
+    </div>
+  </div>
+
+</div>

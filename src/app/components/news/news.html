@@ -1,0 +1,32 @@
+
+<section class="ms-container">
+
+  <section class="newsColumn">
+
+    <h4>Latest News</h4>
+
+    <!--<label>Sory By</label>-->
+    <!--<input type="text" ng-model="letter">-->
+    <!--| limitTo:-10 | orderBy:'-date' last ten, latest-->
+
+    <figure class="newsItem" dir-paginate="article in vm.news | filter:vm.selectedFilter.filterExpr | startsWithLetter:letter | orderBy:'-date' | itemsPerPage: 10">
+      <img src="{{article.images.img1}}" alt="{{article.title}}"/>
+      <figcaption>
+        <h3 class="newsItem__title" ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title}}</a></h3>
+        <p class="newsItem__intro">{{article.post.intro}}</p>
+        <date class="newsItem__date">{{article.date | date:'medium'}}</date>
+        <span class="newsItem__cat">{{article.category}}</span>
+      </figcaption>
+    </figure>
+
+    <dir-pagination-controls></dir-pagination-controls>
+
+    <a ng-href="#/">Back to Home</a>
+
+  </section>
+
+  <aside class="rightColumn">
+    <right-column></right-column>
+  </aside>
+
+</section>

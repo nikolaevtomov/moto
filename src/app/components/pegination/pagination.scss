@@ -1,0 +1,14 @@
+$module: 'pagination';
+
+.#{$module} {
+
+  @include span(12 of 12);
+
+  & li {
+    display: inline;
+    float: left;
+    padding: em(10);
+    text-align: center;
+  }
+
+}
