@@ -18,6 +18,7 @@
     .filter('property', property)                   // Filter for category
     .filter('limitString', limitString);            // Filter for character limit
 
+    // TODO: fix encodeURI, seems like it is not necessary to use it on current Angular version
     function encodeURI() {
         return encodeURI;
     }

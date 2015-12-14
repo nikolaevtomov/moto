@@ -7,7 +7,7 @@
     <div class="motoThumbs supercars"
          ng-repeat="article in vm.news | property:'category':'v8 supercars' | orderBy:'-date' | limitTo:-3">
       <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-      <h4 class="motoThumbs__title"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title}}</a></h4>
+      <h4 class="motoThumbs__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title}}</a></h4>
       <date class="motoThumbs__date">{{article.date | date:'medium'}}</date>
       <p class="motoThumbs__intro">{{article.post.content | limitString:true:200:' ...'}}</p>
       <span class="motoThumbs__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
@@ -17,7 +17,7 @@
     <div class="motoThumbs vintage"
          ng-repeat="article in vm.news | property:'category':'vintage' | orderBy:'-date' | limitTo:-3">
       <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-      <h4 class="motoThumbs__title"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title}}</a></h4>
+      <h4 class="motoThumbs__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title}}</a></h4>
       <date class="motoThumbs__date">{{article.date | date:'medium'}}</date>
       <p class="motoThumbs__intro">{{article.post.content | limitString:true:200:' ...'}}</p>
       <span class="motoThumbs__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
@@ -41,7 +41,7 @@
         Your browser does not support the <code>video</code> element.
       </video>
       <date class="videos__date">{{article.date | date:'medium'}}</date>
-      <h4 class="videos__title"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:100:' ...'}}</a></h4>
+      <h4 class="videos__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:100:' ...'}}</a></h4>
       <span class="videos__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
     </div>
   </article>
