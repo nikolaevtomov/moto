@@ -1,7 +1,7 @@
 (function() {
   'use strict';
 
-  angular
+angular
     .module('moto')
     .factory('news', news);
 

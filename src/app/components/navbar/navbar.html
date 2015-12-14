@@ -11,31 +11,31 @@
 
   <ul class="ms-menu">
 
-    <li ng-class="menuClass('#/')">
+    <li ng-class="vm.menuClass('')">
       <a class="linkName" href="#/">Home</a>
     </li>
 
-    <li ng-class="menuClass('news')">
+    <li ng-class="vm.menuClass('news')">
       <a class="linkName" ng-href="#/news">Latest News</a>
       <ul class="sub_Menu">
-        <li class="sub_Link" ng-class="menuClass('#/news/f1')"><a ng-href="#/news/f1">Formula 1 News</a></li>
-        <li class="sub_Link" ng-class="menuClass('#/news/motogp')"><a ng-href="#/news/motogp">Moto GP News</a></li>
-        <li class="sub_Link" ng-class="menuClass('#/news/rally')"><a ng-href="#/news/rally">World Rallycross</a></li>
-        <li class="sub_Link" ng-class="menuClass('#/news/vintage')"><a ng-href="#/news/vintage">Vintage</a></li>
-        <li class="sub_Link" ng-class="menuClass('#/news/v8 supercars')"><a ng-href="#/news/v8 supercars">V8 Supercars</a></li>
+        <li class="sub_Link" ng-class="vm.menuClass('news/f1')"><a ng-href="#/news/f1">Formula 1 News</a></li>
+        <li class="sub_Link" ng-class="vm.menuClass('news/motogp')"><a ng-href="#/news/motogp">Moto GP News</a></li>
+        <li class="sub_Link" ng-class="vm.menuClass('news/rally')"><a ng-href="#/news/rally">World Rallycross</a></li>
+        <li class="sub_Link" ng-class="vm.menuClass('news/vintage')"><a ng-href="#/news/vintage">Vintage</a></li>
+        <li class="sub_Link" ng-class="vm.menuClass('news/v8 supercars')"><a ng-href="#/news/v8 supercars">V8 Supercars</a></li>
       </ul>
     </li>
 
-    <li ng-class="menuClass('gallery')">
-      <a class="linkName" ng-href="gallery">Gallery</a>
+    <li ng-class="vm.menuClass('#/gallery')">
+      <a class="linkName" ng-href="#/gallery">Gallery</a>
     </li>
 
-    <li ng-class="menuClass('about')">
-      <a class="linkName" ng-href="about">About</a>
+    <li ng-class="vm.menuClass('#/about')">
+      <a class="linkName" ng-href="#/about">About</a>
     </li>
 
-    <li ng-class="menuClass('contact')">
-      <a class="linkName" ng-href="contact">Contact</a>
+    <li ng-class="vm.menuClass('#/contact')">
+      <a class="linkName" ng-href="#/contact">Contact</a>
     </li>
 
     <!--<label>Search</label>-->

@@ -8,7 +8,7 @@
         <figure class="figure" ng-repeat="article in vm.news">
           <img ng-src="{{article.images.img1}}" alt="{{article.title}}">
           <figcaption>
-            <h2><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:48:' ...'}}</a></h2>
+            <h2><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:48:' ...'}}</a></h2>
             <!--<p>{{article.post.content | limitString:true:100:' ...'}}</p>-->
           </figcaption>
         </figure>
@@ -21,7 +21,7 @@
     <div class="mainThm">
       <div class="mainThm__inner" ng-repeat="article in vm.news | property:'category':'rally' | orderBy:'-date' | limitTo:-4">
         <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-        <h4 class="mainThm__inner--title"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:50:' ...'}}</a></h4>
+        <h4 class="mainThm__inner--title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:50:' ...'}}</a></h4>
         <date class="mainThm__inner--date">{{article.date | date:'medium'}}</date>
         <p class="mainThm__inner--content">{{article.post.content | limitString:true:200:' ...'}}</p>
         <span class="mainThm__inner--cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
@@ -34,7 +34,7 @@
         <figure class="figure" ng-repeat="article in vm.news | property:'category':'motogp'">
           <img ng-src="{{article.images.img1}}" alt="{{article.title}}">
           <figcaption>
-            <h2><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:48:' ...'}}</a></h2>
+            <h2><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:48:' ...'}}</a></h2>
             <!--<p>{{article.post.content | limitString:true:50:' ...'}}</p>-->
           </figcaption>
         </figure>
@@ -47,7 +47,7 @@
     <div class="mainThm">
       <div class="mainThm__inner" ng-repeat="article in vm.news | property:'category':'vintage' | orderBy:'-date' | limitTo:-4">
         <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-        <h4 class="mainThm__inner--title"><a ng-href="#/news/{{article.category}}/{{article.title | encodeURI}}">{{article.title | limitString:true:50:' ...'}}</a></h4>
+        <h4 class="mainThm__inner--title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:50:' ...'}}</a></h4>
         <date class="mainThm__inner--date">{{article.date | date:'medium'}}</date>
         <p class="mainThm__inner--content">{{article.post.content | limitString:true:200:' ...'}}</p>
         <span class="mainThm__inner--cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
