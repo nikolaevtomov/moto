@@ -1,0 +1,30 @@
+$thum: 'fThum';
+
+.#{$thum} {
+  position: relative;
+  @include gallery(2 of 10);
+  height: em(415);
+  & h3 {
+
+  }
+  & img {
+    width: 100%;
+  }
+  &__title {
+    font-size: em(14);
+  }
+  &__date {
+    @include date();
+  }
+  &__intro {
+    font-size: em(12);
+  }
+  &__cat {
+    @include tag();
+    position: absolute;
+    display: block;
+    float: left;
+    left: 0;
+    bottom: em(15);
+  }
+}
