@@ -1,14 +1,26 @@
 $module: 'pagination';
 
 .#{$module} {
-
   @include span(12 of 12);
+  text-align: center;
 
   & li {
-    display: inline;
-    float: left;
-    padding: em(10);
+    display: inline-table;
+    width: em(38);
+    height: em(38);
     text-align: center;
+    overflow: hidden;
+    & a {
+      display: table-cell;
+      padding: em(10) em(16);
+    }
+  }
+  & .active {
+    border: em(4) solid $brand;
+    border-radius: em(24);
+  }
+  & .disabled {
+
   }
 
 }

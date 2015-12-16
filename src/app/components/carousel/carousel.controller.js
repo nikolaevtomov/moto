@@ -36,9 +36,9 @@ angular
       vm.moveToSection(vm.activeSection + 1);
     };
 
-    $interval( function(){
+    $interval( function() {
       vm.next();
-    },5000);
+    }, 5000);
 
     vm.moveToSection = function(sectionIndex) {
       if (sectionIndex >= vm.sectionCount) {
@@ -105,7 +105,7 @@ angular
         vm.sectionCount = Math.ceil(
         vm.news.length / $scope.displayingImageCount);
         vm.moveToSection(vm.activeSection); // TODO: keep first image in sight
-        vm.singleImageWidth = (100 / newValue) + '%';
+        vm.singleImageWidth = (100 / newValue - 2) + '%';
       }
     }
 

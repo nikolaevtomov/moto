@@ -1,13 +1,9 @@
-$module: 'newsColumn';
-
-//@include susy-breakpoint(62em, 12) { //  992px
-//  //Tablet Landscape & Small Desktop.
-//
-//}
+$module:  'newsColumn';
 
 .#{$module} {
+
   @include span(12 of 12);
-  @include susy-breakpoint(62em, 12) { //  992px
+  @include susy-breakpoint(62em, 12) {  //  992px
     //Tablet Landscape & Small Desktop.
     @include span(8 of 12);
   }
@@ -17,6 +13,7 @@ $module: 'newsColumn';
 .newsItem {
   width: 100%;
   float: left;
+
   & img {
     width: 25%;
     float: left;
@@ -30,25 +27,25 @@ $module: 'newsColumn';
     float: right;
   }
   &__date {
-    width: 75%;
-    float: right;
+    @include date();
   }
   &__cat {
-    width: 75%;
-    float: right;
+    @include tag();
   }
 
 }
 
-dir-pagination-controls {
+.pagi {
   width: 100%;
   float: left;
 }
 
 .rightColumn {
+
   @include span(12 of 12);
-  @include susy-breakpoint(62em, 12) { //  992px
+  @include susy-breakpoint(62em, 12) {  //  992px
     //Tablet Landscape & Small Desktop.
     @include span(4 of 12 last);
   }
+
 }

@@ -1,49 +1,49 @@
 
-<section class="ms-container thumbnails">
+<section class="ms-container">
 
-  <div class="fThum" ng-repeat="article in vm.news | property:'category':'f1' | orderBy:'-date' | limitTo:-1">
+  <div class="thum" ng-repeat="article in vm.news | property:'category':'f1' | orderBy:'-date' | limitTo:-1">
     <h3><a ng-href="#/news/{{article.category}}">{{article.category}}</a></h3>
     <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-    <h4 class="fThum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title}}</a></h4>
-    <date class="fThum__date">{{article.date | date:'medium'}}</date>
-    <p class="fThum__intro">{{article.post.intro| limitString:true:100:' ...'}}</p>
-    <span class="fThum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
+    <h4 class="thum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title}}</a></h4>
+    <date class="thum__date">{{article.date | date:'medium'}}</date>
+    <p class="thum__intro">{{article.post.intro| limitString:true:100:' ...'}}</p>
+    <span class="thum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
   </div>
 
-  <div class="fThum" ng-repeat="article in vm.news | property:'category':'motogp' | orderBy:'-date' | limitTo:-1">
+  <div class="thum" ng-repeat="article in vm.news | property:'category':'motogp' | orderBy:'-date' | limitTo:-1">
     <h3><a ng-href="#/news/{{article.category}}">{{article.category}}</a></h3>
     <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-    <h4 class="fThum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
-    <date class="fThum__date">{{article.date | date:'medium'}}</date>
-    <p class="fThum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
-    <span class="fThum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
+    <h4 class="thum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
+    <date class="thum__date">{{article.date | date:'medium'}}</date>
+    <p class="thum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
+    <span class="thum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
   </div>
 
-  <div class="fThum" ng-repeat="article in vm.news | property:'category':'rally' | orderBy:'-date' | limitTo:-1">
+  <div class="thum" ng-repeat="article in vm.news | property:'category':'rally' | orderBy:'-date' | limitTo:-1">
     <h3><a ng-href="#/news/{{article.category}}">{{article.category}}</a></h3>
     <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-    <h4 class="fThum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
-    <date class="fThum__date">{{article.date | date:'medium'}}</date>
-    <p class="fThum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
-    <span class="fThum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
+    <h4 class="thum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
+    <date class="thum__date">{{article.date | date:'medium'}}</date>
+    <p class="thum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
+    <span class="thum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
   </div>
 
-  <div class="fThum" ng-repeat="article in vm.news | property:'category':'vintage' | orderBy:'-date' | limitTo:-1">
+  <div class="thum" ng-repeat="article in vm.news | property:'category':'vintage' | orderBy:'-date' | limitTo:-1">
     <h3><a ng-href="#/news/{{article.category}}">{{article.category}}</a></h3>
     <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-    <h4 class="fThum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
-    <date class="fThum__date">{{article.date | date:'medium'}}</date>
-    <p class="fThum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
-    <span class="fThum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
+    <h4 class="thum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
+    <date class="thum__date">{{article.date | date:'medium'}}</date>
+    <p class="thum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
+    <span class="thum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
   </div>
 
-  <div class="fThum" ng-repeat="article in vm.news | property:'category':'v8 supercars' | orderBy:'-date' | limitTo:-1">
+  <div class="thum" ng-repeat="article in vm.news | property:'category':'v8 supercars' | orderBy:'-date' | limitTo:-1">
     <h3><a ng-href="#/news/{{article.category}}">{{article.category}}</a></h3>
     <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-    <h4 class="fThum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
-    <date class="fThum__date">{{article.date | date:'medium'}}</date>
-    <p class="fThum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
-    <span class="fThum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
+    <h4 class="thum__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title | limitString:true:61:' ...'}}</a></h4>
+    <date class="thum__date">{{article.date | date:'medium'}}</date>
+    <p class="thum__intro">{{article.post.intro | limitString:true:100:' ...'}}</p>
+    <span class="thum__cat"><a ng-href="#/news/{{article.category}}">{{article.category}}</a></span>
   </div>
 
 </section>
