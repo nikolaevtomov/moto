@@ -1,4 +1,4 @@
-$module: 'mainThm';
+$module:  'mainThm';
 $module2: '';
 
 .mainLeft {
@@ -15,6 +15,7 @@ $module2: '';
     width: 100%;
     float: left;
   }
+
 }
 
 .mainRight {
@@ -38,84 +39,23 @@ $module2: '';
     margin-left: 0;
   }
 
-
 }
 
 .#{$module} {
-  &__inner {
-    &:nth-child(1) {
-      width: 100%;
-      @include susy-breakpoint(48em, 10) { // 768px
-        width: 40%;
-        height: em(400);
-      }
-      float: left;
-    }
-    &:nth-child(2) {
-      width: 100%;
-      @include susy-breakpoint(48em, 10) { // 768px
-        width: 60%;
-        padding-left: em(12);
-      }
-      float: right;
-      & img {
-        width: 50%;
-        float: left;
-        //border-radius: 50%;
-      }
-      & .mainThm__inner--title {
-        width: 50%;
-        float: right;
-        margin-top: 0;
-        padding-left: em(10);
-      }
+  width: 100%;
+  float: left;
 
+  &__inner {
+  @include gallery(2 of 4);
+
+    &:nth-child(2) {
+      & img {
+        border-radius: 50%;
+      }
     }
     &:nth-child(3) {
-      width: 100%;
-      @include susy-breakpoint(48em, 10) { // 768px
-        width: 60%;
-        padding-left: em(12);
-      }
-      float: right;
       & img {
-        width: 50%;
-        float: left;
-        @include susy-breakpoint(48em, 10) { // 768px
-          display: none;
-          width: 100%;
-        }
-      }
-      & .mainThm__inner--title {
-        width: 50%;
-        float: right;
-        padding-left: em(10);
-        @include susy-breakpoint(48em, 10) { // 768px
-
-        }
-      }
-    }
-    &:nth-child(4) {
-      width: 100%;
-      @include susy-breakpoint(48em, 10) { // 768px
-        width: 60%;
-        padding-left: em(12);
-      }
-      float: right;
-      & img {
-        width: 50%;
-        float: left;
-        @include susy-breakpoint(48em, 10) { // 768px
-          display: none;
-        }
-      }
-      & .mainThm__inner--title {
-        width: 50%;
-        float: right;
-        padding-left: em(10);
-        @include susy-breakpoint(48em, 10) { // 768px
-
-        }
+        border-radius: 50%;
       }
     }
     & img {
@@ -139,9 +79,8 @@ $module2: '';
       @include tag();
     }
   }
+
 }
-
-
 
 @include susy-breakpoint(20em, 6) { // 320px
   // Mobile.

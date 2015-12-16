@@ -24,6 +24,7 @@ $transition-duration: .3s;
     height: em(320);
     transition: width $transition-duration;
     display: inline-table;
+    margin: 0 1%;
   }
 
   &__image {

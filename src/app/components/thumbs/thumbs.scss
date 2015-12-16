@@ -1,9 +1,10 @@
-$thum: 'fThum';
+$thum: 'thum';
 
 .#{$thum} {
   position: relative;
   @include gallery(2 of 10);
   height: em(415);
+
   & h3 {
 
   }
@@ -27,4 +28,5 @@ $thum: 'fThum';
     left: 0;
     bottom: em(15);
   }
+
 }

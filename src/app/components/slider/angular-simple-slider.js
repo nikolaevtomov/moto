@@ -160,6 +160,8 @@
       imgs[i].style.position = 'absolute';
       imgs[i].style.top = '0' + unit;
       imgs[i].style.left = '0' + unit;
+      imgs[i].style.bottom = '0' + unit;
+      imgs[i].style.right = '0' + unit;
       imgs[i].style[transitionProperty] = startValue + unit;
       imgs[i].style.zIndex = 0;
     }

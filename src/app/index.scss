@@ -13,11 +13,6 @@ html {
   box-sizing: border-box;
 }
 
-// display none
-//main, header, .carouselar, .footerThumbnails {
-//  display: none;
-//}
-
 a {
   color: inherit;
   text-decoration: none;
@@ -57,7 +52,6 @@ $fonts: "../assets/fonts/";
   url('#{$fonts}poyntertext-bold-webfont.svg#poyntertextregular') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -70,7 +64,6 @@ $fonts: "../assets/fonts/";
   url('#{$fonts}poyntertext-sansblack-webfont.svg#poyntertextregular') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -83,7 +76,6 @@ $fonts: "../assets/fonts/";
   url('#{$fonts}poyntertext-sansbold-webfont.svg#poyntertextregular') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 @font-face {
@@ -96,7 +88,6 @@ $fonts: "../assets/fonts/";
   url('#{$fonts}poyntertext-sanslight-webfont.svg#poyntertextregular') format('svg');
   font-weight: normal;
   font-style: normal;
-
 }
 
 $brand:    #01bf9d;
@@ -109,7 +100,6 @@ $brand4:   #ea4b35;
   color: $brand;
   font-size: em(12);
   font-style: italic;
-
 }
 
 @mixin tag() {
@@ -164,11 +154,11 @@ $brand4:   #ea4b35;
 
 // global settings
 $susy: (
-        debug: (
-                image: hide,
-                output: overlay,
-                toggle: top right
-        )
+  debug: (
+    image: show,     // hide
+    output: overlay,
+    toggle: top right
+  )
 );
 
 // Default map for adding gutter to right
@@ -187,25 +177,25 @@ body {
 
   @include container();
 
-  @include susy-breakpoint(20em, 6) { // 320px
+  @include susy-breakpoint(20em, 6) {  // 320px
     // Mobile.
     //color: orangered;
   }
 
-  @include susy-breakpoint(30em, 8) { // 480px
+  @include susy-breakpoint(30em, 8) {  // 480px
     // Mobile Landscape.
     //color: green;
   }
 
   @include susy-breakpoint(48em, 10) { // 768px
     // Tablet Portrait.
-    @include container(46.875em); // 750px
+    @include container(46.875em);      // 750px
     //color: yellow;
   }
 
   @include susy-breakpoint(62em, 12) { //  992px
     //Tablet Landscape & Small Desktop.
-    @include container(60.625em); // 970px
+    @include container(60.625em);      // 970px
     //color: dodgerblue;
     padding: 0 em(15);
     background: #fff;
@@ -213,7 +203,7 @@ body {
 
   @include susy-breakpoint(75em, 12) { // 1200px
     // Large Desktop.
-    @include container(73.125em); // 1170px
+    @include container(73.125em);      // 1170px
     //color: mediumpurple;
     padding: 0 em(15);
     background: #fff;
