@@ -1,9 +1,17 @@
 $thum: 'thum';
 
+.thumbs {
+  display: none;
+  @include susy-breakpoint(48em, 10) { // 768px
+    // Tablet Portrait.
+    display: block;
+  }
+}
+
 .#{$thum} {
   position: relative;
   @include gallery(2 of 10);
-  height: em(415);
+  height: em(465);
 
   & h3 {
 
