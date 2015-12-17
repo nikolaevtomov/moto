@@ -56,39 +56,31 @@ $moduleMotoGp:        'mainSliderGp';
   position: relative;
 
   & button {
-    border: 0 none;
+    //border: 0 none;
     position: absolute;
     width: em(50);
     height: em(50);
-    //border: em(4) solid #fff;
-    //border-radius: em(24);
-    //background: transparent;
+    border: em(4) solid #fff;
+    border-radius: em(25);
     z-index: 11;
+    @include transition(all .5s ease);
+    &:hover {
+      @include transform(rotate(360deg));
+    }
   }
   &__prev {
     top: 42%;
     left: 5%;
     background: url("#{$images}arrowLeft.png") no-repeat center center transparent;
     background-size: cover;
-    //&:before {
-    //  position: relative;
-    //  top: 0px;
-    //  content: '';
-    //  border: 2px solid #fff;
-    //  border-radius: em(2) em(2) 0 0;
-    //  @include transform(translateY(50px) rotate(45deg));
-    //}
-    //&:after {
-    //  content: '';
-    //  border: 2px solid #fff;
-    //  border-radius: 0 0 em(2) em(2);
-    //}
+    background-position: -3px;
   }
   &__next {
     top: 42%;
     right: 5%;
     background: url("#{$images}arrowRight.png") no-repeat center center transparent;
     background-size: cover;
+    background-position: 3px;
   }
 
 }

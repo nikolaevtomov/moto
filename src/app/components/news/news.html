@@ -9,15 +9,15 @@
     <!--<input type="text" ng-model="letter">-->
     <!--| limitTo:-10 | orderBy:'-date' last ten, latest-->
 
-    <figure class="newsItem" dir-paginate="article in vm.news | filter:vm.selectedFilter.filterExpr | startsWithLetter:letter | orderBy:'-date' | itemsPerPage: 10">
-      <img src="{{article.images.img1}}" alt="{{article.title}}"/>
-      <figcaption>
+    <div class="newsColumn__wrp">
+      <figure class="newsItem" dir-paginate="article in vm.news | filter:vm.selectedFilter.filterExpr | startsWithLetter:letter | orderBy:'-date' | itemsPerPage: 10">
+        <img src="{{article.images.img1}}" alt="{{article.title}}"/>
         <h3 class="newsItem__title"><a ng-href="#/news/{{article.category}}/{{article.title}}">{{article.title}}</a></h3>
         <p class="newsItem__intro">{{article.post.intro}}</p>
         <date class="newsItem__date">{{article.date | date:'medium'}}</date>
         <span class="newsItem__cat">{{article.category}}</span>
-      </figcaption>
-    </figure>
+      </figure>
+    </div>
 
     <dir-pagination-controls class="pagi"></dir-pagination-controls>
 

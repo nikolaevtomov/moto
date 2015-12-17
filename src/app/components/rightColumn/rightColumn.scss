@@ -18,8 +18,10 @@ $module3:  'videos';
   }
 
   & .right {
+    display: none;
     @include susy-breakpoint(62em, 12) { //  992px
       //Tablet Landscape & Small Desktop.
+      display: block;
       @include span(4 last);
     }
 

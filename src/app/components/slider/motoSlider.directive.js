@@ -4,7 +4,7 @@
 angular
   .module('moto')
   .directive('motoSlider', motoSlide);
-  function motoSlide(MotoSliderService, $timeout) {
+  function motoSlide(MotoSliderService, $timeout, $compile) {
 
       /** @ngInject */
 
@@ -17,6 +17,16 @@ angular
         },
         controllerAs: 'vm',
         link: function postLink(scope, element, attrs) {
+
+
+////console.log(arguments);
+//vm.btn = angular.element('.sliderWrp__prev');
+//var tpl = '<span class="one">one</span>';
+//vm.btn.append(tpl);
+//$compile(vm.btn)(scope);
+
+
+
 
           var options = attrs, disposeWatcher;
 
